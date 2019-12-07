@@ -20,9 +20,19 @@ document.querySelector('body')
 
 bodyTag.addEventListener('keypress',(event)=> {
   bodyTag.style.backgroundColor ='seagreen'
-})
+
+  setTimeout(()=>{
+    bodyTag.style.backgroundColor ="white"
+},5000)
+
+},false)
 
 
+//animate//
+
+const mainImg = document.querySelector('intro')
+
+mainImg
 
 
 
@@ -32,7 +42,7 @@ bodyTag.addEventListener('keypress',(event)=> {
 
 
 //mouseenter,mouseleave//
-const textContent = document.querySelector(".text-content p")
+const textContent = document.querySelector(".text-content")
 
 textContent.addEventListener('mouseenter',(event)=>{
     textContent.style.transform = "scale(1.2)";
