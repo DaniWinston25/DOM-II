@@ -13,8 +13,14 @@ setTimeout(()=>{
 
 },false)
 
-//click//
+//keypress//
 
+const bodyTag =
+document.querySelector('body')
+
+bodyTag.addEventListener('keypress',(event)=> {
+  bodyTag.style.backgroundColor ='seagreen'
+})
 
 
 
@@ -28,7 +34,7 @@ setTimeout(()=>{
 //mouseenter,mouseleave//
 const textContent = document.querySelector(".text-content p")
 
-imgTop.addEventListener('mouseenter',(event)=>{
+textContent.addEventListener('mouseenter',(event)=>{
     textContent.style.transform = "scale(1.2)";
        textContent.style.transition = "all 0.2s";
      });
