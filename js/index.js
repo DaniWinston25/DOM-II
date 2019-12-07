@@ -33,16 +33,16 @@ bodyTag.addEventListener('keypress',(event)=> {
 
 //animate//
 
-const mainImg = document.querySelector('intro')
+const mainImg = document.querySelector('[src="img/fun-bus.jpg"]')
 
+mainImg.addEventListener('mouseenter',(event)=>{
+    event.target.style.transform = ('rotate(45deg) translateX(50px)');
+})
 
-
-
-
-
-
-
-
+mainImg.addEventListener('mouseleave',(event)=>{
+    event.target.style.transform = ('rotate(0deg) translateX(0px)');
+ 
+})
 
 //mouseenter,mouseleave//
 const textContent = document.querySelectorAll(".text-content")
@@ -60,3 +60,11 @@ textContent.forEach((zoom)=>{
          })
         });
 
+//sound//
+
+const soundBoat = document.getElementById('boatsound');
+
+const boatPic = document.querySelector('[src="img/destination.jpg"]')
+boatPic.addEventListener('dblclick',(event)=>{
+  soundBoat.play()
+})
