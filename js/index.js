@@ -68,10 +68,7 @@ const boatPic = document.querySelector('[src="img/destination.jpg"]')
 boatPic.addEventListener('dblclick',(event)=>{
   soundBoat.play()
 })
-//images animation//
 
-gsap.to(".img-content", {duration: 2.5, ease:"elastic.out(1, 0.3)", y: 40
-});
 
 //stop propagation---not working not sure why?//
 
@@ -91,5 +88,9 @@ stopNavigation.forEach((anchor)=>{
 })
 });
 
+///STRETCH ATTEMPT///
 
+//images animation//
 
+gsap.to(".img-content", {duration: 2.5, ease:"elastic.out(1, 0.3)", y: 40
+});
