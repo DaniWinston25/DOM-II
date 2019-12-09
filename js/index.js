@@ -22,7 +22,7 @@ const bodyTag =
 document.querySelector('body')
 
 bodyTag.addEventListener('keypress',(event)=> {
-  bodyTag.style.backgroundColor ='seagreen'
+  bodyTag.style.backgroundColor ='rgb(94,219,175)'
 
   setTimeout(()=>{
     bodyTag.style.backgroundColor ="white"
@@ -60,6 +60,8 @@ textContent.forEach((zoom)=>{
          })
         });
 
+
+
 //sound//
 
 const soundBoat = document.getElementById('boatsound');
@@ -69,9 +71,16 @@ boatPic.addEventListener('dblclick',(event)=>{
   soundBoat.play()
 })
 
+
+//stop propagation---not working not sure why?//
+
+const stoppingZoom = document.querySelector('.text-content');
+
+stoppingZoom.addEventListener('mouseenter',(event)=>{
+     event.stopPropagation();
+  })
+
 //prevent Default//
-
-
 
 const stopNavigation = document.querySelectorAll('.nav-link')
 
@@ -80,5 +89,6 @@ stopNavigation.forEach((anchor)=>{
   event.preventDefault()
 })
 });
+
 
 
