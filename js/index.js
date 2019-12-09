@@ -36,7 +36,7 @@ bodyTag.addEventListener('keypress',(event)=> {
 const mainImg = document.querySelector('[src="img/fun-bus.jpg"]')
 
 mainImg.addEventListener('mouseenter',(event)=>{
-    event.target.style.transform = ('rotate(45deg) translateX(50px)');
+    event.target.style.transform = ('rotate(15deg) translateX(30px)');
 })
 
 mainImg.addEventListener('mouseleave',(event)=>{
@@ -68,3 +68,17 @@ const boatPic = document.querySelector('[src="img/destination.jpg"]')
 boatPic.addEventListener('dblclick',(event)=>{
   soundBoat.play()
 })
+
+//prevent Default//
+
+
+
+const stopNavigation = document.querySelectorAll('.nav-link')
+
+stopNavigation.forEach((anchor)=>{
+  anchor.addEventListener("click",(event)=>{
+  event.preventDefault()
+})
+});
+
+
